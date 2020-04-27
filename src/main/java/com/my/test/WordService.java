@@ -18,7 +18,7 @@ public class WordService {
     }
 
     private String[] splitSentence(String sentence) throws WordException {
-        if(sentence == null || sentence.isBlank())
+        if(sentence == null || sentence.isEmpty())
             throw new WordException("blank or null sentence not supported.");
         String[] split = sentence.replaceAll("\\s{2,}", " ")
                 .replaceAll("[^a-zA-Z ]", "")
